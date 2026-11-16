@@ -9,13 +9,13 @@ const schema = z
       .enum(["development", "test", "production"])
       .default("development"),
     HOST: z.string().min(1).default("127.0.0.1"),
-    PORT: port.default(6051),
+    PORT: port.default(4001),
     LOG_LEVEL: z
       .enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"])
       .default("info"),
     ADMIN_ORIGINS: z
       .string()
-      .default("http://localhost:6001,http://127.0.0.1:6001")
+      .default("http://localhost:3001,http://127.0.0.1:3001")
       .transform((value) => value.split(",").map((origin) => origin.trim()))
       .pipe(
         z

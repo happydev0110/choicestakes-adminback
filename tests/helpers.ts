@@ -65,7 +65,7 @@ export const fakeDatabase = {
   async close() {},
 };
 export const headers = {
-  origin: "http://localhost:6001",
+  origin: "http://localhost:3001",
   "x-requested-with": "choicestakes-admin",
   "content-type": "application/json",
 };

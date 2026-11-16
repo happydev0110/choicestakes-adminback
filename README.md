@@ -28,10 +28,10 @@ admin tables can provision an administrator; keep that access restricted to oper
 In `choicestakes-admin/.env.local`:
 
 ```dotenv
-ADMIN_BACKEND_INTERNAL_URL=http://127.0.0.1:6051
+ADMIN_BACKEND_INTERNAL_URL=http://127.0.0.1:4001
 ```
 
-Start the frontend with `npm run dev` (port 6001). The admin browser calls the frontend's
+The admin backend defaults to port 4001. Start the frontend with `npm run dev` (port 3001). The admin browser calls the frontend's
 same-origin `/api/admin/auth/*` and `/api/admin/manage/*` proxies; they forward to this service.
 `ADMIN_ORIGINS` must contain the exact URL used to open the admin frontend,
 including the port, with no trailing slash. Add your LAN origin when accessing from another device.
